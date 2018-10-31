@@ -25,6 +25,10 @@ public:
     this->bools[0] = c;
   }
 
+  // I'm well aware that I should be checking if pos is in range 0:numberOfBits,
+  // but the aesthetics would be ruined and no function would keep the inline
+  // tag. That would sadden me deeply. :(
+
   inline void bitOn(int pos) { this->bools[pos / 8] |= (1 << (pos % 8)); }
   inline void bitOff(int pos) { this->bools[pos / 8] &= ~(1 << (pos % 8)); }
 
